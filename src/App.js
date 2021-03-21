@@ -4,7 +4,6 @@ import Table from './table';
 import Modal from './Modal';
 const getLocalStorage = () => {
   let list = localStorage.getItem('lists');
-  
   if (list) {
     return (list = JSON.parse(localStorage.getItem('lists')));
   } else {
@@ -19,8 +18,7 @@ setData(arr);
 }
 useEffect(()=>{
  localStorage.setItem("lists", JSON.stringify(data));
-},[data])
- 
+},[data]) 
   return (
     <div className="Container">
       <Container style={{ marginTop: '100px' }}>
